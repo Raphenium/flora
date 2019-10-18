@@ -1,0 +1,24 @@
+{
+    "require": {
+        "twilio/sdk": "^5.16",
+        "cocur/slugify": "^3.0",
+        "nuovo/spreadsheet-reader": "^0.5.11",
+        "neitanod/forceutf8": "~2.0",
+        "pusher/pusher-php-server": "^3.0",
+        "tecnickcom/tcpdf": "^6.2",
+        "Studio-42/elFinder": "2.1.39",
+        "stripe/stripe-php": "^6.0",
+        "phpmailer/phpmailer": "^5.2.26",
+        "nabble/semalt-blocker": "~1",
+        "erusev/parsedown": "^1.7",
+        "backup-manager/backup-manager": "^1.2",
+        "zbateson/mail-mime-parser": "^0.4.9",
+        "league/omnipay": "^3.0",
+        "omnipay/mollie": "^4.0",
+        "omnipay/braintree": "~3.0@dev",
+        "omnipay/paypal": "^3.0",
+        "omnipay/authorizenet": "3.x@dev",
+        "2checkout/2checkout-php": "^0.3.1",
+        "willdurand/email-reply-parser": "^2.8"
+    }
+}
