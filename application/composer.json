@@ -8,7 +8,7 @@
         "tecnickcom/tcpdf": "^6.2",
         "Studio-42/elFinder": "2.1.39",
         "stripe/stripe-php": "^6.0",
-        "phpmailer/phpmailer": "^5.2.26",
+        "phpmailer/phpmailer": "^6.1.6",
         "nabble/semalt-blocker": "~1",
         "erusev/parsedown": "^1.7",
         "backup-manager/backup-manager": "^1.2",

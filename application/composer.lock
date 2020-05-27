@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eabdd593a71ef9d683c6c08d5c500e76",
+    "content-hash": "ec73d76d1edc832fcc8562d0b5cb8ce4",
     "packages": [
         {
             "name": "2checkout/2checkout-php",
@@ -905,15 +905,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-authorizenet.git",
-                "reference": "c109d81bc2cdbee8705fe9e4f99ba55841485286"
+                "reference": "8ccce3190c00d0a129c62dc1d1451d0125bab640"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-authorizenet/zipball/c109d81bc2cdbee8705fe9e4f99ba55841485286",
-                "reference": "c109d81bc2cdbee8705fe9e4f99ba55841485286",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-authorizenet/zipball/8ccce3190c00d0a129c62dc1d1451d0125bab640",
+                "reference": "8ccce3190c00d0a129c62dc1d1451d0125bab640",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
                 "omnipay/common": "^3"
             },
             "require-dev": {
@@ -958,7 +961,7 @@
                 "pay",
                 "payment"
             ],
-            "time": "2018-05-21T22:15:58+00:00"
+            "time": "2019-04-27T22:33:23+00:00"
         },
         {
             "name": "omnipay/braintree",
@@ -966,12 +969,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-braintree.git",
-                "reference": "b1918571b013fdd9e4caedd784bc40642b3b7dcf"
+                "reference": "227ffdc04ea7c4cd0358f028bf7dfae2228eeb94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-braintree/zipball/b1918571b013fdd9e4caedd784bc40642b3b7dcf",
-                "reference": "b1918571b013fdd9e4caedd784bc40642b3b7dcf",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-braintree/zipball/227ffdc04ea7c4cd0358f028bf7dfae2228eeb94",
+                "reference": "227ffdc04ea7c4cd0358f028bf7dfae2228eeb94",
                 "shasum": ""
             },
             "require": {
@@ -1021,7 +1024,7 @@
                 "payment",
                 "purchase"
             ],
-            "time": "2018-05-25T15:16:01+00:00"
+            "time": "2018-11-09T08:39:19+00:00"
         },
         {
             "name": "omnipay/common",
@@ -1580,69 +1583,54 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.26",
+            "version": "v6.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "70362997bda4376378be7d92d81e2200550923f7"
+                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/70362997bda4376378be7d92d81e2200550923f7",
-                "reference": "70362997bda4376378be7d92d81e2200550923f7",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
+                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
-                "php": ">=5.0.0"
+                "ext-filter": "*",
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "doctrine/annotations": "1.2.*",
-                "jms/serializer": "0.16.*",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "4.8.*",
-                "symfony/debug": "2.8.*",
-                "symfony/filesystem": "2.8.*",
-                "symfony/translation": "2.8.*",
-                "symfony/yaml": "2.8.*",
-                "zendframework/zend-cache": "2.5.1",
-                "zendframework/zend-config": "2.5.1",
-                "zendframework/zend-eventmanager": "2.5.1",
-                "zendframework/zend-filter": "2.5.1",
-                "zendframework/zend-i18n": "2.5.1",
-                "zendframework/zend-json": "2.5.1",
-                "zendframework/zend-math": "2.5.1",
-                "zendframework/zend-serializer": "2.5.*",
-                "zendframework/zend-servicemanager": "2.5.*",
-                "zendframework/zend-stdlib": "2.5.1"
+                "doctrine/annotations": "^1.2",
+                "friendsofphp/php-cs-fixer": "^2.2",
+                "phpunit/phpunit": "^4.8 || ^5.7"
             },
             "suggest": {
-                "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
+                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "class.phpmailer.php",
-                    "class.phpmaileroauth.php",
-                    "class.phpmaileroauthgoogle.php",
-                    "class.smtp.php",
-                    "class.pop3.php",
-                    "extras/EasyPeasyICS.php",
-                    "extras/ntlm_sasl_client.php"
-                ]
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "LGPL-2.1-only"
             ],
             "authors": [
                 {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
                     "name": "Marcus Bointon",
                     "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
                 },
                 {
                     "name": "Andy Prevost",
@@ -1653,7 +1641,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-11-04T09:26:05+00:00"
+            "time": "2020-05-27T12:24:03+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2287,12 +2275,12 @@
             "version": "0.4.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zbateson/MailMimeParser.git",
+                "url": "https://github.com/zbateson/mail-mime-parser.git",
                 "reference": "1e85e46204616e59ff7e34e4a141acdf9cf0c70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/MailMimeParser/zipball/1e85e46204616e59ff7e34e4a141acdf9cf0c70a",
+                "url": "https://api.github.com/repos/zbateson/mail-mime-parser/zipball/1e85e46204616e59ff7e34e4a141acdf9cf0c70a",
                 "reference": "1e85e46204616e59ff7e34e4a141acdf9cf0c70a",
                 "shasum": ""
             },
